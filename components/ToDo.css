@@ -1,0 +1,105 @@
+.todo-item {
+    width: var(--content-width);
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size);
+    margin-bottom: 1.3rem;
+}
+
+p {
+    box-sizing: border-box;
+    background-color: rgb(96, 146, 255);
+    color: white;
+    height: 100%;
+    border-radius: var(--radius);
+    border: 2px solid rgb(11, 87, 252);
+
+    padding: 0 0.6rem;
+    margin-right: 0.4rem;
+    flex: 0.7;
+    display: flex;
+    align-items: center;
+
+    transition: all 0.3s ease 0s;
+}
+
+p:hover {
+    background-color: rgb(11, 87, 252);
+}
+
+button {
+    flex: 1;
+    height: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1.2rem;
+}
+
+.buttons {
+    flex: 0.3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.done-btn {
+    margin-right: 0.3rem;
+    background-color: rgb(60, 180, 60);
+    border: 2px solid rgb(17, 128, 17);
+    border-radius: var(--radius);
+}
+
+.done-btn:hover {
+    background-color: rgb(17, 128, 17);
+}
+
+.del-btn {
+    background-color: rgb(231, 74, 74);
+    border: 2px solid rgb(146, 20, 20);
+    border-radius: var(--radius);
+}
+
+.del-btn:hover {
+    background-color: rgb(146, 20, 20);
+}
+
+.todo-done {
+    text-decoration: line-through;
+    background-color: rgb(60, 180, 60);
+    border: 2px solid rgb(17, 128, 17);
+}
+.todo-done:hover {
+    text-decoration: none;
+    background-color: rgb(17, 128, 17);
+    border: 2px solid rgb(17, 128, 17);
+}
+
+@keyframes append-animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.todo-item {
+    animation: append-animate 0.2s linear;
+}
+
+.remove {
+    animation: fadeOut 0.2s linear;
+}
